@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>Smoking Meat</title>
+    <link rel="icon" href="images/flame.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="~/css/styles.css">
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/js/site.js"></script>
+</head>
+<body>
+
+    <nav>
+        <a asp-controller="Home" asp-action="Index">Home</a>
+        <a asp-controller="Home" asp-action="Calculator">Calculator</a>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <p>Smoking Meat &copy; 2024. Designed and built by Adam Ross.</p>
+    </footer>
+</body>
+</html>

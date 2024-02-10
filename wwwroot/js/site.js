@@ -1,4 +1,13 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿function Calculate() {
+    var hours = $("#hours").val();
+    var total = hours * 20;
+    var existingContent = $("#output").value();
 
-// Write your JavaScript code.
+    if ($.isNumeric(total) && total >= 0) {
+        $("#output").value(existingContent + "$" + total);
+    } else if (total === "") {
+        $("#output").html("Invalid input. Please enter a number.");
+    } else {
+        $("#output").html("Invalid input. Please enter a positive number.");
+    }
+}
