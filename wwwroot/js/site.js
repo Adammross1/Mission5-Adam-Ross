@@ -1,13 +1,14 @@
 ﻿function Calculate() {
-    var hours = $("#hours").val();
-    var total = hours * 20;
-    var existingContent = $("#output").value();
+    // Get the value from the input field
+    var hours = $('#hours').val();
 
-    if ($.isNumeric(total) && total >= 0) {
-        $("#output").value(existingContent + "$" + total);
-    } else if (total === "") {
-        $("#output").html("Invalid input. Please enter a number.");
-    } else {
-        $("#output").html("Invalid input. Please enter a positive number.");
+    // Check if the input is a valid number
+    if ($.isNumeric(hours) && hours >= 0) {
+        var total = hours * 20;
+        $('#output').html($('#output').html() + '$' + total);
     }
+    else {
+        $('#output').html('Please enter a valid number.');
+    }
+ 
 }
